@@ -122,10 +122,10 @@ class MazeGame:
 
         sr, sc = start
         gr, gc = goal
-        display[sr][sc] = "S"
-        display[gr][gc] = "G"
+        display[sr][sc] = ""
+        display[gr][gc] = "@"
         pr, pc = self.player
-        display[pr][pc] = "P"
+        display[pr][pc] = "X"
 
         horizontal_border = "+" + "-" * self.maze.width + "+"
         rows = [horizontal_border]
@@ -255,7 +255,7 @@ class MazeGame:
             "Visit every corner to reveal more of the layout. Ask for a 'hint' "
             "to learn which direction to move next or 'solve' to display the "
             "shortest path from your current position.\n"
-            "Reach the tile marked 'G' to win."
+            "Reach the tile marked 'X' to win."
         )
 
 
